@@ -6,9 +6,8 @@ RUN chmod 777 /usr/src/app
 RUN apt-get -qq update
 RUN apt-get -qq install -y git python3 python3-pip \
     locales python3-lxml aria2 \
-    DeBIAN_FRONTEND=noninteractive TZ=Etc/UTU apt-get-y install tzdata
     curl pv jq nginx npm
-    
+t    
 	
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt && \
